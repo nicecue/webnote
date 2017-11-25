@@ -3,6 +3,8 @@
 typescript 를 사용해서 react, mobx 기반으로 작성된 웹 메모장
 번들링은 webpack 3 사용.
 
+[라이브 데모](https://nicecue.github.io/webnote/)
+
 ## 개발 스펙
 
 - [Typescript](https://www.typescriptlang.org/) 2.5
