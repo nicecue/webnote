@@ -61,7 +61,7 @@ $ npm run build
 ```
 
 ## 배포
-- Github Pages 에 배포 (gh-phages 브랜치 사용)
+- Github Pages 에 배포 (gh-pages 브랜치 사용)
 ```
 $ npm run deploy
 ```
