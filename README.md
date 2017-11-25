@@ -1,14 +1,10 @@
-# Frontend Boilerplate with React, MobX & TypeScript
+# 웹 메모장 (사전과제)
 
-A bare minimum react-mobx-webpack-typescript boilerplate with TodoMVC example.
+typescript 로 react, mobx 기반해서 작성된 웹 메모장
+번들링은 webpack 3 사용.
 
-Note that this project does not include **Server-Side Rendering**,  **Testing Frameworks** and other stuffs that makes the package unnecessarily complicated.
 
-Ideal for creating React apps from the scratch.
-
-See also: [react-redux-typescript-boilerplate](https://github.com/rokoroku/react-redux-typescript-boilerplate)
-
-## Contains
+## 스펙
 
 - [x] [Typescript](https://www.typescriptlang.org/) 2.5
 - [x] [React](https://facebook.github.io/react/) 16
@@ -17,9 +13,9 @@ See also: [react-redux-typescript-boilerplate](https://github.com/rokoroku/react
 - [x] [Mobx React](https://github.com/mobxjs/mobx-react)
 - [x] [Mobx React Router](https://github.com/alisd23/mobx-react-router/)
 - [x] [Mobx React Devtools](https://github.com/mobxjs/mobx-react-devtools)
-- [x] [TodoMVC example](http://todomvc.com)
 
-### Build tools
+
+### 빌드 & 번들링 옵션
 
 - [x] [Webpack](https://webpack.github.io) 3.8
   - [x] [Tree Shaking](https://webpack.js.org/guides/tree-shaking/)
@@ -31,26 +27,31 @@ See also: [react-redux-typescript-boilerplate](https://github.com/rokoroku/react
 - [x] [React Hot Loader](https://github.com/gaearon/react-hot-loader)
 - [x] [ExtractText Plugin](https://github.com/webpack/extract-text-webpack-plugin)
 - [x] [HTML Webpack Plugin](https://github.com/ampedandwired/html-webpack-plugin)
+- [x] [Copy Webpack Plugin](https://github.com/webpack-contrib/copy-webpack-plugin)
 
-
-## Setup
+## 설치
 
 ```
 $ npm install
 ```
 
-## Running
+## 실행
 
 ```
 $ npm start
 ```
 
-## Build
+## 빌드
 
 ```
 $ npm run build
 ```
 
-# License
+## 배포
+```
+$ npm run deploy
+```
+
+# 라이센스(license)
 
 MIT
