@@ -31,7 +31,7 @@ module.exports = {
   output: {
     path: outPath,
     filename: 'bundle.js',
-    publicPath: '/webnote'
+    publicPath: ''
   },
   target: 'web',
   resolve: {
