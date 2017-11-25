@@ -1,4 +1,4 @@
-# 웹 메모장 (사전과제)
+# 웹 메모장 (네이버 면접 사전과제)
 
 typescript 를 사용해서 react, mobx 기반으로 작성된 웹 메모장
 번들링은 webpack 3 사용.
@@ -7,13 +7,14 @@ typescript 를 사용해서 react, mobx 기반으로 작성된 웹 메모장
 
 ## 개발 스펙
 
-- [Typescript](https://www.typescriptlang.org/) 2.5
-- [React](https://facebook.github.io/react/) 16
-- [React Router](https://github.com/ReactTraining/react-router) 4.2
-- [Mobx](https://github.com/mobxjs/mobx)
-- [Mobx React](https://github.com/mobxjs/mobx-react)
-- [Mobx React Router](https://github.com/alisd23/mobx-react-router/)
-- [Mobx React Devtools](https://github.com/mobxjs/mobx-react-devtools)
+- 언어 : [Typescript](https://www.typescriptlang.org/) 2.5
+- 프레임워크 
+  - [React](https://facebook.github.io/react/) 16
+  - [React Router](https://github.com/ReactTraining/react-router) 4.2
+- 상태관리자
+  - [Mobx](https://github.com/mobxjs/mobx)
+  - [Mobx React](https://github.com/mobxjs/mobx-react)
+  - [Mobx React Router](https://github.com/alisd23/mobx-react-router/)
 
 ## 번들링
 
