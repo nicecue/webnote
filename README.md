@@ -62,7 +62,10 @@ $ npm run build
 
 ## 배포
 - Github Pages 에 배포 (gh-pages 브랜치 사용)
+- repository 명은 webnote 이어야 함
 ```
+$ npm run build
+
 $ npm run deploy
 ```
 
