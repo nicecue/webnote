@@ -1,6 +1,6 @@
 # 웹 메모장 (네이버 면접 사전과제)
 
-typescript 를 사용해서 react, mobx 기반으로 작성된 웹 메모장
+typescript 를 사용해서 react, mobx 기반으로 작성된 웹 메모장<br />
 번들링은 webpack 3 사용.
 
 [라이브 데모](https://nicecue.github.io/webnote/)
