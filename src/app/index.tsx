@@ -12,7 +12,9 @@ import { RouterStore, MemoStore } from 'Stores';
 useStrict(true);
 
 // @store 생성
-const history = createBrowserHistory();
+const history = createBrowserHistory({
+    basename: '/webnote'
+});
 const routerStore = new RouterStore(history);
 const memoStore = new MemoStore();
 
