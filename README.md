@@ -6,9 +6,6 @@ typescript 로 react, mobx 기반해서 작성된 웹 메모장
 ## 개발 및 배포 관련 branch 룰
 - [Git Flow](https://github.com/petervanderdoes/gitflow-avh/wiki/Installation) 사용
 
-## 린팅(Linting)
-- [Airbnb TSLint Config](https://www.npmjs.com/package/tslint-config-airbnb) 적용
-
 ## 라이브러리
 
 - [Typescript](https://www.typescriptlang.org/) 2.5
@@ -20,7 +17,7 @@ typescript 로 react, mobx 기반해서 작성된 웹 메모장
 - [Mobx React Devtools](https://github.com/mobxjs/mobx-react-devtools)
 
 ## 스타일
-  -[AdminLTE](https://adminlte.io/themes/AdminLTE/index2.html) 적용
+- [AdminLTE](https://adminlte.io/themes/AdminLTE/index2.html) 적용
 
 ## 번들링
 
@@ -38,6 +35,9 @@ typescript 로 react, mobx 기반해서 작성된 웹 메모장
     - [ExtractText Plugin](https://github.com/webpack/extract-text-webpack-plugin)
     - [HTML Webpack Plugin](https://github.com/ampedandwired/html-webpack-plugin)
     - [Copy Webpack Plugin](https://github.com/webpack-contrib/copy-webpack-plugin)
+
+## 린팅(Linting)
+- [Airbnb TSLint Config](https://www.npmjs.com/package/tslint-config-airbnb) 적용
 
 ## 설치
 
