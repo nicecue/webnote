@@ -3,6 +3,11 @@
 typescript 로 react, mobx 기반해서 작성된 웹 메모장
 번들링은 webpack 3 사용.
 
+## 개발 및 배포 관련 branch 룰
+- [Git Flow] 사용(https://github.com/petervanderdoes/gitflow-avh/wiki/Installation)
+
+## Code Linting
+- airbnb for Typescript 적용
 
 ## 스펙
 
@@ -14,8 +19,7 @@ typescript 로 react, mobx 기반해서 작성된 웹 메모장
 - [x] [Mobx React Router](https://github.com/alisd23/mobx-react-router/)
 - [x] [Mobx React Devtools](https://github.com/mobxjs/mobx-react-devtools)
 
-
-### 빌드 & 번들링 옵션
+## 빌드 & 번들링
 
 - [x] [Webpack](https://webpack.github.io) 3.8
   - [x] [Tree Shaking](https://webpack.js.org/guides/tree-shaking/)
