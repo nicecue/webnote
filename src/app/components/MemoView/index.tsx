@@ -23,10 +23,13 @@ export class MemoView extends React.Component<MemoViewProps, MemoViewState> {
 
     render() {
         const { title, contents, date } = this.props.memo;
+        const replaced = contents.split('\n').map((item, key) => {
+            return <span key={key}>{item}<br /></span>
+        });
         return (
             <div onClick={this.onClickMemo}>
                 <div>{title}</div>
-                <div>{contents}</div>
+                <div>{replaced}</div>
                 <div>수정</div>
                 <div>삭제</div>
             </div>

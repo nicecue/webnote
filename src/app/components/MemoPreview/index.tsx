@@ -33,10 +33,13 @@ export class MemoPreview extends React.Component<MemoPreviewProps, MemoPreviewSt
 
     render() {
         const { title, contents, date } = this.props.memo;
+        const replaced = contents.split('\n').map((item, key) => {
+            return <span key={key}>{item}<br /></span>
+        });
         return (
             <div onClick={this.onClickMemo}>
                 <div>{title}</div>
-                <div>{contents}</div>
+                <div>{replaced}</div>
                 <div onClick={this.onBtnModify}>수정</div>
                 <div onClick={this.onBtnDelete}>삭제</div>
 

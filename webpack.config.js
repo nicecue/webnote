@@ -128,7 +128,8 @@ module.exports = {
     new CopyWebpackPlugin(
       [ 
         // AdminLTE 복사
-        { from: 'assets/lib/AdminLTE-2.4.2/dist', to: 'lib/AdminLTE' }
+        { from: 'assets/lib/AdminLTE-2.4.2/dist', to: 'lib/AdminLTE' },
+        { from: 'assets/lib/bootstrap-3.3.7', to: 'lib/bootstrap' }
       ]
     )
   ],

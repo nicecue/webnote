@@ -11,7 +11,7 @@ export class App extends React.Component<any, any> {
 
   render() {
     return (
-      <div className="container">
+      <div className="wrapper">
         {this.props.children}
         {this.renderDevTool()}
       </div>

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { inject, observer } from 'mobx-react';
 import { Link } from 'react-router-dom';
 
-import { Header, MemoList } from 'Components';
+import { MemoHeader, MemoList, Page, Contents, Footer } from 'Components';
 import { MemoStore } from 'Stores';
 
 interface ListProps {
@@ -22,13 +22,25 @@ export class List extends React.Component<ListProps, ListState> {
 
     render() {
         const { memos, deleteMemo, modifyMemo } = this.props.memoStore;
+        const addButtonStyle = {
+            right: 60,
+            bottom: 60,
+            position: 'absolute' as any,
+            borderRadius: '50%',
+            fontSize: '28px'
+        }
         return (
-            <div className="wrapper">
-                <Header />
-                <MemoList memos={memos} deleteMemo={deleteMemo} />
-                <span className="bg-green">2017.10.10</span>
-                <div><Link to="/new">메모작성</Link></div>
-            </div>
+            <Page>
+                <MemoHeader />
+                <Contents>
+                    <MemoList memos={memos} deleteMemo={deleteMemo} />
+                   <Link to="/new" title="메모작성">
+                        <button type="button" className="btn btn-info btn-circle btn-lg" style={addButtonStyle} >
+                            <i className="glyphicon glyphicon-plus"></i>
+                        </button>
+                    </Link>
+                </Contents>
+            </Page>
         )
     }
 

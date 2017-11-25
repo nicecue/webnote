@@ -2,7 +2,7 @@ import * as React from 'react';
 import { inject, observer } from 'mobx-react';
 import { Link } from 'react-router-dom';
 
-import { Header, MemoEdit } from 'Components';
+import { MemoHeader, MemoEdit } from 'Components';
 import { MemoStore, RouterStore } from 'Stores';
 
 interface Props {
@@ -29,7 +29,7 @@ export class Edit extends React.Component<Props, State> {
         const { router, memoStore } = this.props;
         return (
             <div className="wrapper">
-                <Header />
+                <MemoHeader />
                 <MemoEdit router={router} memoStore={memoStore}/>
             </div>
         )
