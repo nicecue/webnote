@@ -8,12 +8,14 @@ import { Router, Route, Switch } from 'react-router';
 import { App, List, New } from 'Containers';
 import { RouterStore, MemoStore } from 'Stores';
 
+import config from '../../config.js';
+
 // 모든 @state는 @action 으로만 변경
 useStrict(true);
 
 // @store 생성
 const history = createBrowserHistory({
-    basename: '/webnote'
+    basename: config.baseRoutingPath
 });
 const routerStore = new RouterStore(history);
 const memoStore = new MemoStore();

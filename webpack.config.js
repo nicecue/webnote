@@ -113,6 +113,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'assets/index.html'
     }),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': isProduction? JSON.stringify('production') : JSON.stringify('development')
+    }),
     // window 에 라이브러리 객체 삽입
     new webpack.ProvidePlugin({
       $: 'jquery',
