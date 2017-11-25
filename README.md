@@ -10,9 +10,10 @@ typescript 를 사용해서 react, mobx 기반으로 작성된 웹 메모장<br 
 - 언어 : [Typescript](https://www.typescriptlang.org/) 2.5
 - 프레임워크 
   - [React](https://facebook.github.io/react/) 16
-  - [React Router](https://github.com/ReactTraining/react-router) 4.2
 - 상태관리자
   - [Mobx](https://github.com/mobxjs/mobx)
+- 관련 라이브러리
+  - [React Router](https://github.com/ReactTraining/react-router) 4.2
   - [Mobx React](https://github.com/mobxjs/mobx-react)
   - [Mobx React Router](https://github.com/alisd23/mobx-react-router/)
 
