@@ -1,12 +1,9 @@
 # 웹 메모장 (사전과제)
 
-typescript 로 react, mobx 기반해서 작성된 웹 메모장
+typescript 를 사용해서 react, mobx 기반으로 작성된 웹 메모장
 번들링은 webpack 3 사용.
 
-## 개발 및 배포 관련 branch 룰
-- [Git Flow](https://github.com/petervanderdoes/gitflow-avh/wiki/Installation) 사용
-
-## 라이브러리
+## 개발 스펙
 
 - [Typescript](https://www.typescriptlang.org/) 2.5
 - [React](https://facebook.github.io/react/) 16
@@ -15,9 +12,6 @@ typescript 로 react, mobx 기반해서 작성된 웹 메모장
 - [Mobx React](https://github.com/mobxjs/mobx-react)
 - [Mobx React Router](https://github.com/alisd23/mobx-react-router/)
 - [Mobx React Devtools](https://github.com/mobxjs/mobx-react-devtools)
-
-## 스타일
-- [AdminLTE](https://adminlte.io/themes/AdminLTE/index2.html) 적용
 
 ## 번들링
 
@@ -36,8 +30,14 @@ typescript 로 react, mobx 기반해서 작성된 웹 메모장
     - [HTML Webpack Plugin](https://github.com/ampedandwired/html-webpack-plugin)
     - [Copy Webpack Plugin](https://github.com/webpack-contrib/copy-webpack-plugin)
 
+## 스타일
+- [AdminLTE](https://adminlte.io/themes/AdminLTE/index2.html) 적용
+
 ## 린팅(Linting)
 - [Airbnb TSLint Config](https://www.npmjs.com/package/tslint-config-airbnb) 적용
+
+## 개발 및 배포 관련 branch 룰
+- [Git Flow](https://github.com/petervanderdoes/gitflow-avh/wiki/Installation) 사용
 
 ## 설치
 
