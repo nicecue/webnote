@@ -56,7 +56,7 @@ export class MemoList extends React.Component<MemoListProps, MemoListState>{
         const containerStyle = {
             height: 'calc(100% - 120px)',
             overflowY: 'auto' as any,
-            paddingTop: '10px',
+            paddingTop: '10px'
         }
         const memoList = this.getMemoList();
 
@@ -68,7 +68,7 @@ export class MemoList extends React.Component<MemoListProps, MemoListState>{
                     </span>
                     <div className="info-box-content">
                             <span className="info-box-text" style={{color:'#333', fontSize: '18px', margin: '12px 10px 4px 10px'}}>저장된 메모</span>
-                            <span className="info-box-number" style={{color:'#333', fontSize: '20px', fontWeight: 'bold', marginLeft: '10px'}}>100</span>
+                            <span className="info-box-number" style={{color:'#333', fontSize: '20px', fontWeight: 'bold', marginLeft: '10px'}}>{memos.length}</span>
                         </div>
                 </div>
                 <div className="memos-container" style={containerStyle}>

@@ -69,12 +69,48 @@ export class MemoEdit extends React.Component<MemoEditProps, MemoEditState> {
 
     render() {
         const { title, contents } = this.state;
+
+        const inputStyle = {
+            fontSize: '18px',
+            height: '39px',
+        }
+        const textareaStyle = {
+            marginTop: '8px',
+            height: 'calc(100% - 120px)',
+            fontSize: '18px',
+            padding: '20px 20px'
+        }
+
+        const editContainerStyle = {
+            marginTop: '10px',
+            height: 'calc(100% - 120px)'
+        }
+
+        const buttonBoxStyle = {
+            marginTop: '20px',
+            width: '100%',
+            height: '60px',
+            padding: '0'
+        }
+
         return (
-            <div>
-                <input type="text" value={title} ref={r=>this.titleInput=r} onChange={this.onChangeTitle}/>
-                <textarea value={contents} ref={r=>this.contentsInput=r} onChange={this.onChangeContents}/>
-                <div onClick={this.onBtnSave}>저장</div>
-                <div onClick={this.onBtnCancel}>취소</div>
+            <div  style={editContainerStyle}>
+                <div className="input-group">
+                    <div className="input-group-btn">
+                        <span className="btn btn-warning" data-toggle="dropdown" style={{fontSize:'18px'}}>제목</span>
+                    </div>
+                    <input type="text" className="form-control" value={title} ref={r=>this.titleInput=r} onChange={this.onChangeTitle} style={inputStyle}/>
+                </div>
+                <textarea className="form-control" value={contents} onChange={this.onChangeContents} style={textareaStyle} ref={r=>this.contentsInput=r}/>
+                <div style={buttonBoxStyle} className="col-md-12">
+                    <div className="col-xs-6" style={{paddingLeft:'0'}}>
+                        <button onClick={this.onBtnSave} className="btn btn-block btn-info btn-lg">저장</button>
+                    </div>
+                    <div className="col-xs-6" style={{padding:'0'}}>
+                        <button onClick={this.onBtnCancel} className="btn btn-block btn-default btn-lg">취소</button>
+                    </div>
+                    
+                </div>
             </div>
         )
     }

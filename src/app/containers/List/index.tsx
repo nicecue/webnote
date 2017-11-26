@@ -23,8 +23,9 @@ export class List extends React.Component<ListProps, ListState> {
     render() {
         const { memos, deleteMemo, modifyMemo } = this.props.memoStore;
         const addButtonStyle = {
-            right: 40,
-            top: 25,
+            right: 30,
+            // top: 25,
+            bottom: 40,
             position: 'absolute' as any,
             borderRadius: '50%',
             fontSize: '28px'
