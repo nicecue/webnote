@@ -14,6 +14,7 @@ var outPath = path.join(__dirname, './dist');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
+var TSLintPlugin = require('tslint-webpack-plugin');
 
 module.exports = {
   context: sourcePath,
@@ -131,7 +132,10 @@ module.exports = {
         { from: 'assets/lib/AdminLTE-2.4.2/dist', to: 'lib/AdminLTE' },
         { from: 'assets/lib/bootstrap-3.3.7', to: 'lib/bootstrap' }
       ]
-    )
+    ),
+    new TSLintPlugin({
+      files: ['./src/app/**/*.ts', './src/app/**/*.tsx']
+    })
   ],
   devServer: {
     contentBase: sourcePath,
