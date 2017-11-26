@@ -4,10 +4,10 @@ import { RouterStore as BaseRouterStore, syncHistoryWithStore } from 'mobx-react
 export class RouterStore extends BaseRouterStore {
   constructor(history?: History) {
     super();
-    if (history) {
+    if (history !== null && history !== undefined) {
       this.history = syncHistoryWithStore(history, this);
     }
   }
-};
+}
 
 export default RouterStore;

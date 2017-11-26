@@ -4,10 +4,10 @@ export class App extends React.Component<any, any> {
 
   renderDevTool() {
     if (process.env.NODE_ENV !== 'production') {
-      const DevTools = require('mobx-react-devtools').default;
-      return (<DevTools />);
+      const DEVTOOLS = require('mobx-react-devtools').default;
+      return (<DEVTOOLS />);
     }
-  };
+  }
 
   render() {
     return (
@@ -17,4 +17,4 @@ export class App extends React.Component<any, any> {
       </div>
     );
   }
-};
+}

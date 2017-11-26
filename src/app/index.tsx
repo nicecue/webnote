@@ -8,14 +8,14 @@ import { Router, Route, Switch } from 'react-router';
 import { App, List, New, View, Edit } from 'Containers';
 import { RouterStore, MemoStore } from 'Stores';
 
-import config from '../../config.js';
+import config from '../../config';
 
 // 모든 @state는 @action 으로만 변경
 useStrict(true);
 
 // @store 생성
 const history = createBrowserHistory({
-    basename: config.baseRoutingPath
+  basename: config.baseRoutingPath,
 });
 const routerStore = new RouterStore(history);
 const memoStore = new MemoStore();
@@ -35,5 +35,5 @@ ReactDOM.render(
             </Router>
         </App>
     </Provider >,
-    document.getElementById('root')
+    document.getElementById('root'),
 );
