@@ -23,8 +23,8 @@ export class List extends React.Component<ListProps, ListState> {
     render() {
         const { memos, deleteMemo, modifyMemo } = this.props.memoStore;
         const addButtonStyle = {
-            right: 60,
-            bottom: 60,
+            right: 40,
+            top: 25,
             position: 'absolute' as any,
             borderRadius: '50%',
             fontSize: '28px'
@@ -34,7 +34,7 @@ export class List extends React.Component<ListProps, ListState> {
                 <MemoHeader />
                 <Contents>
                     <MemoList memos={memos} deleteMemo={deleteMemo} />
-                   <Link to="/new" title="메모작성">
+                    <Link to="/new" title="메모작성">
                         <button type="button" className="btn btn-info btn-circle btn-lg" style={addButtonStyle} >
                             <i className="glyphicon glyphicon-plus"></i>
                         </button>

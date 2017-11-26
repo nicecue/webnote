@@ -29,7 +29,11 @@ export const Header = ({ children }) => {
 export const Contents = ({ children }) => {
     const style = {
         marginLeft: 0,
-        minHeight: 'calc(100% - 80px)'
+        minHeight: 'calc(100% - 160px)',
+        height: 'calc(100% - 160px)',
+        width: '600px',
+        margin: '0 auto',
+        position: 'relative' as any
     };
     return (
         <div className="content-wrapper" style={style}>
