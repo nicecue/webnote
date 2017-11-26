@@ -39,7 +39,7 @@ export class New extends React.Component<Props, State> {
                         <div className="info-box-content">
                                 <span className="info-box-text" style={{color:'#333', fontSize: '18px', margin: '12px 10px 4px 10px'}}>메모 작성</span>
                             </div>
-                    </div>
+                        </div>
                         <MemoEdit router={router} memoStore={memoStore}/>
                     </div>
                 </Contents>

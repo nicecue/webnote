@@ -3,11 +3,12 @@ import * as moment from 'moment';
 
 import { MemoModel } from 'Models';
 import { MemoPreview } from 'Components';
-import { MemoStore } from 'Stores';
+import { MemoStore, RouterStore } from 'Stores';
 
 interface MemoListProps {
     memos: Array<MemoModel>;
     deleteMemo: (idx: number) => void;
+    router: RouterStore;
 };
 
 interface MemoListState {
@@ -20,7 +21,8 @@ export class MemoList extends React.Component<MemoListProps, MemoListState>{
     }
 
     getMemoList = () => {
-        const { memos, deleteMemo } = this.props;
+        const { memos, deleteMemo, router } = this.props;
+        console.log('list.router:', router);
         if (!memos.length) {
             return null;
         }
@@ -31,7 +33,7 @@ export class MemoList extends React.Component<MemoListProps, MemoListState>{
             const date = moment(memo.date).format('YYYY-MM-DD');
             if (date !== writtenDate) {
                 memoList.push(
-                    <li className="time-label">
+                    <li className="time-label" key={`time_${i}`}>
                         <span className="bg-red">
                             {date}
                         </span>
@@ -40,11 +42,11 @@ export class MemoList extends React.Component<MemoListProps, MemoListState>{
                 writtenDate = date;
             }
             memoList.push(
-                <MemoPreview memo={memo} deleteMemo={deleteMemo} key={`memo_${memo.id}`} />
+                <MemoPreview memo={memo} deleteMemo={deleteMemo} key={`memo_${memo.id}`} router={router}/>
             );
         }
         memoList.push(
-            <li>
+            <li key={"last"}>
                 <i className="fa fa-clock-o bg-graw"></i>
             </li>
         )

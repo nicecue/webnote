@@ -2,10 +2,12 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 
 import { MemoModel } from 'Models';
+import { RouterStore } from 'Stores';
 
 export interface MemoPreviewProps {
     memo: MemoModel;
     deleteMemo: (idx: number) => void;
+    router: RouterStore;
 };
 
 export interface MemoPreviewState {
@@ -19,16 +21,23 @@ export class MemoPreview extends React.Component<MemoPreviewProps, MemoPreviewSt
 
     private onClickMemo = (event: React.SyntheticEvent<any>) => {
         event.preventDefault();
-        console.log( this.props.memo );
+        const { router, memo } = this.props;
+        console.log('router:', router);
+        router.history.push( `/view/${memo.id}`);
     }
 
     private onBtnDelete = (event: React.SyntheticEvent<any>) => {
+        event.preventDefault();
+        event.stopPropagation();
         const { deleteMemo, memo } = this.props;
         deleteMemo(memo.id);
     }
 
     private onBtnModify = (event: React.SyntheticEvent<any>) => {
-
+        event.preventDefault();
+        event.stopPropagation();
+        const { router, memo } = this.props;
+        router.history.push( `/edit/${memo.id}`);
     }
 
     render() {
@@ -39,7 +48,7 @@ export class MemoPreview extends React.Component<MemoPreviewProps, MemoPreviewSt
         return (
             <li>
                 <div className="timeline-item">
-                    <div className="box box-success box-solid" onClick={this.onClickMemo}>
+                    <div className="box box-success box-solid" onClick={this.onClickMemo} style={{cursor:'pointer'}}>
                         <div className="box-header with-border">
                             <h3 className="box-title">{title}</h3>
                             <div className="box-tools pull-right">

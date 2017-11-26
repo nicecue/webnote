@@ -5,7 +5,7 @@ import { useStrict } from 'mobx';
 import { Provider } from 'mobx-react';
 import { Router, Route, Switch } from 'react-router';
 
-import { App, List, New } from 'Containers';
+import { App, List, New, View, Edit } from 'Containers';
 import { RouterStore, MemoStore } from 'Stores';
 
 import config from '../../config.js';
@@ -29,6 +29,8 @@ ReactDOM.render(
                     <Route exact path="/" component={List} />
                     <Route path="/list" component={List} />
                     <Route path="/new" component={New} />
+                    <Route path="/view/:memoId" component={View} />
+                    <Route path="/edit/:memoId" component={Edit} />
                 </Switch>
             </Router>
         </App>

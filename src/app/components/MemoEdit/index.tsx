@@ -56,9 +56,13 @@ export class MemoEdit extends React.Component<MemoEditProps, MemoEditState> {
         if (!this.validate()) {
             return;
         }
-        const { memoStore, router } = this.props;
-        const newMemo = new MemoModel(this.titleInput.value, this.contentsInput.value, new Date());
-        memoStore.addMemo(newMemo);
+        const { memoStore, router, memo } = this.props;
+        if (memo) {
+            memoStore.modifyMemo( memo.id, this.titleInput.value, this.contentsInput.value, new Date());
+        } else {
+            memoStore.addMemo(this.titleInput.value, this.contentsInput.value, new Date());
+        }
+        
         router.history.goBack();
     }
 
