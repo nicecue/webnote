@@ -17,7 +17,8 @@ export const Header = ({ children }) => {
         height: '80px',
         textAlign: 'center',
         lineHeight: '80px',
-        fontSize: '30px'
+        fontSize: '30px',
+        color: '#CCC'
     };
     return (
         <div className="header-wrapper" style={style}>
@@ -33,7 +34,8 @@ export const Contents = ({ children }) => {
         height: 'calc(100% - 160px)',
         width: '600px',
         margin: '0 auto',
-        position: 'relative' as any
+        position: 'relative' as any,
+        borderRadius: '5px'
     };
     return (
         <div className="content-wrapper" style={style}>

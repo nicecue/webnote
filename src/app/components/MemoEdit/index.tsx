@@ -97,7 +97,7 @@ export class MemoEdit extends React.Component<MemoEditProps, MemoEditState> {
             <div  style={editContainerStyle}>
                 <div className="input-group">
                     <div className="input-group-btn">
-                        <span className="btn btn-warning" data-toggle="dropdown" style={{fontSize:'18px'}}>제목</span>
+                        <span className="btn btn-primary" data-toggle="dropdown" style={{fontSize:'18px'}}>제목</span>
                     </div>
                     <input type="text" className="form-control" value={title} ref={r=>this.titleInput=r} onChange={this.onChangeTitle} style={inputStyle}/>
                 </div>

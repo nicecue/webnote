@@ -17,7 +17,7 @@ export class MemoHeader extends React.Component<MemoHeaderProps, MemoHeaderState
     render() {
         return (
             <Header>
-                WEB <b>NOTE</b>
+                WEB <span style={{color:'#FFF'}}><b>NOTE</b></span>
             </Header>
         );
     }
